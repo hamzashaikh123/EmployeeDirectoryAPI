@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "Roboto";
+      src: url('../fonts/Roboto/Roboto-Light.ttf') format('truetype');
+    font-family:"Roboto-Thin";
+        src: url("../fonts/Roboto/Roboto-Thin.ttf") format("truetype");
+  }
+*{
+    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+}
+body{
+    position: relative;
+    background-color: #faf5f5;
+    margin: 0;
+}
+
+.main-heading{
+   font-family: "Roboto-Thin";
+   text-align: center;
+}
+.grid-container{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 320px;  
+}
+.card{
+    width: 320px;
+    margin-bottom: 10px;
+    border: 1px solid  lightgrey;
+    border-radius: 10px;
+    display: flex;
+    background-color: white;
+}
+.avatar{
+    border-radius: 50%;
+    margin: auto 5px;
+    padding: 10px;
+    max-width: 90px;
+}
+.email,
+.address{
+    font-size: 12px;
+}
+/* OVERLAY ELEMENT */
+.overlay{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background: rgba(100, 100, 100, 0.4);
+
+}
+.modal{
+    margin: 15% auto auto;
+    text-align: center;
+    width: 250px;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+}
+.modal-close{
+    position: absolute;
+    right: 15px;
+    top:5px;
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+
+}
+
+@media(min-width:768px){
+    *{
+        font-size: 16px;
+    }
+    .grid-container{
+        max-width: 768px;
+        grid-template-columns: auto auto; 
+        row-gap: 10px;
+        height: 100vh;
+        margin-bottom: 10px;
+
+    }
+    .card{
+        margin: 0 auto;
+        width: 330px;
+    }
+    .email,
+    .address{
+    font-size: 14px;
+    }
+    .modal{
+        width: 375px;
+    }
+}
+
+@media(min-width:1024px){
+    *{
+        font-size: 17px;
+    }
+    body{
+        position: inherit;
+    }
+    .grid-container{
+        max-width: 1024px;
+        grid-template-columns: auto auto auto;
+        row-gap: 10px;
+        height: 70vh;
+        align-content: center;
+    }
+    .modal{
+        margin: 10% auto auto;
+
+    }
+
+}
